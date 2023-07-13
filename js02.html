@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS02</title>
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <script>
+        x = Number(prompt("Nhập tháng"));
+        y = Number(prompt("Nhập năm"));
+        switch (x) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                date = 31;
+                break;
+            case 2:
+                if((y % 4 === 0 && y % 100 !== 0) || y% 400 === 0){
+                    date = 29
+                }else date =28;
+            default:
+                break;
+        }
+
+        alert(`Tháng ${x} năm ${y} có `)
+    </script>
+</body>
+</html>
