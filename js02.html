@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS02</title>
-</head>
-<body>
-    <div id="container">
-        
-    </div>
+  </head>
+  <body>
+    <div id="container"></div>
     <script>
-        x = Number(prompt("Nhập tháng"));
-        y = Number(prompt("Nhập năm"));
-        switch (x) {
-            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                date = 31;
-                break;
-            case 2:
-                if((y % 4 === 0 && y % 100 !== 0) || y% 400 === 0){
-                    date = 29
-                }else date =28;
-            default:
-                break;
-        }
-
-        alert(`Tháng ${x} năm ${y} có `)
+      let result = document.querySelector("#container");
+      x = Number(prompt("Nhập tháng"));
+      y = Number(prompt("Nhập năm"));
+      switch (x) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          date = 31;
+          break;
+        case 2:
+          if ((y % 4 === 0 && y % 100 !== 0) || y % 400 === 0) {
+            date = 29;
+          } else date = 28;
+          break;
+        default:
+          break;
+      }
+      result.innerHTML = `<h2>Tháng ${x} năm ${y} có ${date} ngày</h2> <div class="time"></div><button>Xem ngày giờ</button>`;
+      let btn = document.querySelector("button");
+      btn.addEventListener("click", function () {
+        let time = new Date();
+        let year = time.getFullYear();
+        let month = time.getMonth();
+        let date = time.getDate();
+        let day = time.getDay();
+        let days = [
+          "Chủ Nhật",
+          "Thứ Hai",
+          "Thứ Ba",
+          "Thứ Tư",
+          "Thứ Năm",
+          "Thứ Sáu",
+          "Thứ Bảy",
+        ];
+        let dayNow = days[day];
+        let hour = time.getHours();
+        let min = time.getMinutes();
+        let second = time.getSeconds();
+        let result_time = document.querySelector(".time");
+        result_time.innerHTML = `<h4>Hôm nay, thứ ${dayNow} ngày ${date}/${month}/${year}</h4> <h4>${hour}:${min}:${second}</h4> `;
+      });
     </script>
-</body>
+  </body>
 </html>
