@@ -52,6 +52,7 @@ nav li:hover .subnav{
   height: calc(100vh - (10rem + 10px));
 }
 .leftbar {
+  overflow: auto;
   width: 20%;
   height: 100%;
   background-color: rgb(185, 225, 243);
@@ -81,7 +82,7 @@ h4 {
 #content .main > .content{
   width: 50%;
   height: 50%;
-  background-color: aquamarine;
+  background-color:  aliceblue;
   z-index: 1;
   float: left;
 }
@@ -90,6 +91,21 @@ h4 {
   height: 100%;
   overflow: scroll;
 }
+#content .rightbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+#content .rightbar .ads{
+  background-color: antiquewhite;
+  height: 30%;
+  width: 100%;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
 footer {
   background-color: blue;
   position: absolute;
@@ -97,4 +113,7 @@ footer {
   width: 100%;
   text-align: center;
   height: 3rem;
+  line-height: 3rem;
+  color: yellow;
+  font-weight: bold;
 }
