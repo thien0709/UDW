@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: red;
+    width: 100vw;
+    height: 3rem;
+    text-align: center;
+}
+h1{
+    line-height: 3rem;
+}
+#content .square{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    margin: 5px;
+    float: left;
+}
+.square:nth-child(1
+){
+    animation: backgroundnth1 ;
+    -webkit-animation: backgroundnth1 20s infinite;
+    -moz-animation: backgroundnth1 20s infinite;
+    -o-animation: backgroundnth1 20s infinite
+}
+@keyframes backgroundnth1 {
+    0%{
+        background-image: url(../images/javascript.jpg);
+    }
+    100%{
+        background-image: url(../images/jQuery.jpg);
+    }
+}
+.square:nth-child(2
+){
+
+}
+.square:nth-child(3
+){
+    
+}
+.square:nth-child(4
+){
+    
+}
