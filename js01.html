@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính tuổi</title>
+  </head>
+  <body style="text-align: center">
+    <table border="1" align="center">
+      <caption>
+        <b>Chương trình tính tuổi</b>
+      </caption>
+      <tr>
+        <td>Nhập vào tên của bạn:</td>
+        <td><input type="text" class="name" placeholder="Thành" /></td>
+      </tr>
+      <tr>
+        <td>Nhập vào năm sinh:</td>
+        <td><input type="text" class="birth" placeholder="1980" /></td>
+      </tr>
+    </table>
+    <button type="button">Tính tuổi</button>
+    <div class="result">
+    </div>
+    <script>
+      let btn = document.querySelector("button");
+      let name = document.querySelector(".name");
+      let birth = document.querySelector(".birth");        
+      let result = document.querySelector(".result");
+      btn.addEventListener("click", function(e){
+        result.innerHTML = `<p>Chào bạn ${name.value}!</p>
+        <p>Tuổi của bạn là ${2023 - Number(birth.value)}</p>`;
+      })
+    </script>
+  </body>
+</html>
