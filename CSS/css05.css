@@ -12,36 +12,52 @@ h1{
     line-height: 3rem;
 }
 #content .square{
-    width: 300px;
-    height: 300px;
-    background-color: aqua;
-    margin: 5px;
+    width: 200px;
+    height: 200px;
+    margin: 5rem;
+    color: yellow;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 200px;
     float: left;
 }
 .square:nth-child(1
 ){
-    animation: backgroundnth1 ;
-    -webkit-animation: backgroundnth1 20s infinite;
-    -moz-animation: backgroundnth1 20s infinite;
-    -o-animation: backgroundnth1 20s infinite
+    -webkit-animation: background 5s alternate linear infinite;
 }
-@keyframes backgroundnth1 {
+@-webkit-keyframes background{
     0%{
-        background-image: url(../images/javascript.jpg);
+        background-image: url(../images/javascript.jpg) ;
+        background-size: cover;
     }
     100%{
-        background-image: url(../images/jQuery.jpg);
+        background-image:url(../images/html.jpg);
+        background-size: cover;
     }
 }
 .square:nth-child(2
 ){
-
+    border: 3px dashed blue;  
+    background-color: aqua;
+    border-radius: 0 2rem;
 }
 .square:nth-child(3
 ){
-    
+    border: 3px dotted palevioletred;
+    border-radius:  2rem 0;
+    background-color: aqua;
 }
 .square:nth-child(4
 ){
-    
+    border: 2px solid rgb(72, 255, 0);
+    background-color: rgb(5, 95, 110);
+
+    animation: rotate 2s infinite;
+}
+@keyframes rotate {
+
+    100%{
+        transform: rotate(360deg);
+    transition: linear 2s ;
+    }
 }
