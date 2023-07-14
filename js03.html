@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <style>
-        table{
-            border: 2px solid #333;
-        }
+      table {
+        border: 2px solid #333;
+      }
     </style>
-</head>
-<body>
-   <table >
-    <caption>
+  </head>
+  <body>
+    <table align="center">
+      <caption>
         <b>Chương trình giải phương trình bậc 2</b>
-    </caption>
-    <tr>
+      </caption>
+      <tr>
         <td>A =</td>
-        <td><input type="number" class="A"></td>
-    </tr>
-    <tr>
+        <td><input type="number" class="A" /></td>
+      </tr>
+      <tr>
         <td>B =</td>
-        <td><input type="number" class="B"></td>
-    </tr>
-    <tr><td>C =</td> <td><input type="number" class="C"></td></tr>
-    <tr>
+        <td><input type="number" class="B" /></td>
+      </tr>
+      <tr>
+        <td>C =</td>
+        <td><input type="number" class="C" /></td>
+      </tr>
+      <tr>
         <td></td>
-        <td><input type="button" value="Giải" class="G">
-            <input type="button" value="Xóa" class="X">
+        <td>
+          <input type="button" value="Giải" class="G" />
+          <input type="button" value="Xóa" class="X" />
         </td>
-    </tr>
-   </table> 
-   <div id="result">
-
-   </div>
-   <script>
-    let A = document.querySelector("A");
-    let B = document.querySelector("B");
-    let G = document.querySelector("G");
-    let X = document.querySelector("X");
-    let result = document.querySelector("#result");
-    G.addEventListener("click", function(){
-        
-        result.innerHTML = `<h5>Phương trình có ${} nghiệm là: </h5>
-    <h5>x1 = ${}</h5>
-    <h5>x2 = ${}</h5>`;
-    })
-    
-   </script>
-</body>
+      </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+      let G = document.querySelector(".G");
+      let X = document.querySelector(".X");
+      let result = document.querySelector("#result");
+      G.addEventListener("click", function () {
+        let A = Number(document.querySelector(".A").value);
+        let B = Number(document.querySelector(".B").value);
+        let C = Number(document.querySelector(".C").value);
+        if (A == 0) {
+          result.innerHTML = `<h5> Phương trình có 1 nghiệm x  = ${
+            -C / B
+          } </h5>`;
+        } else {
+          let delta = (B * B )- 4 * A * C;
+          let x1 = (-B + Math.sqrt(delta)) / (2 * A);
+          let x2 = (-B - Math.sqrt(delta)) /( 2 * A);
+          let x = -B / (2 * A);
+          if (delta == 0) {
+            result.innerHTML = `<h5>Phương trình có 1 nghiệm là: </h5>
+               <h5>x = ${x}</h5>`;
+            return;
+          }
+          if (delta > 0) {
+            result.innerHTML = `<h5>Phương trình có 2 nghiệm là: </h5>
+               <h5>x1 = ${x1}</h5> <h5>x2 = ${x2}</h5>`;
+          } else {
+            result.innerHTML = `Phương trình vô nghiệm`;
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
