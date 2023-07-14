@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <style>
+        table{
+            border: 2px solid #333;
+        }
+    </style>
 </head>
 <body>
-   <table>
-    
+   <table >
+    <caption>
+        <b>Chương trình giải phương trình bậc 2</b>
+    </caption>
+    <tr>
+        <td>A =</td>
+        <td><input type="number" class="A"></td>
+    </tr>
+    <tr>
+        <td>B =</td>
+        <td><input type="number" class="B"></td>
+    </tr>
+    <tr><td>C =</td> <td><input type="number" class="C"></td></tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="Giải" class="G">
+            <input type="button" value="Xóa" class="X">
+        </td>
+    </tr>
    </table> 
+   <div id="result">
+
+   </div>
+   <script>
+    let A = document.querySelector("A");
+    let B = document.querySelector("B");
+    let G = document.querySelector("G");
+    let X = document.querySelector("X");
+    let result = document.querySelector("#result");
+    G.addEventListener("click", function(){
+        
+        result.innerHTML = `<h5>Phương trình có ${} nghiệm là: </h5>
+    <h5>x1 = ${}</h5>
+    <h5>x2 = ${}</h5>`;
+    })
+    
+   </script>
 </body>
 </html>
