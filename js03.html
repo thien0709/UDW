@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <style>
-      table {
-        border: 2px solid #333;
-        background-color: aquamarine;
+      table,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: rgb(250, 245, 215);
+        padding: 5px;
       }
     </style>
   </head>
@@ -15,7 +18,8 @@
     <form onsubmit="return false;" style="margin: auto; width: 50vw">
       <table style="width: 100%">
         <caption>
-          <b>Chương trình giải phương trình bậc 2</b>
+          <h2>Chương trình giải phương trình bậc 2</h2>
+          <h4>ax<sup>2</sup>+bx+c</h4>
         </caption>
         <tr>
           <td>A =</td>
@@ -39,38 +43,6 @@
       </table>
       <div id="result"></div>
     </form>
-    <script>
-      let G = document.querySelector(".G");
-      let X = document.querySelector(".X");
-      let result = document.querySelector("#result");
-      G.addEventListener("click", function () {
-        let A = Number(document.querySelector(".A").value);
-        let B = Number(document.querySelector(".B").value);
-        let C = Number(document.querySelector(".C").value);
-        if (A == "" || B == "" || C == "") {
-          result.innerHTML = ` <h5> Bạn chưa nhập giá trị. Hãy nhập để tính </h5> `;
-          return;
-        }
-        if (A == 0) {
-          result.innerHTML = `<h5> Phương trình có 1 nghiệm x  = ${-C / B} </h5>`;
-        } else {
-          let delta = B * B - 4 * A * C;
-          let x1 = (-B + Math.sqrt(delta)) / (2 * A);
-          let x2 = (-B - Math.sqrt(delta)) / (2 * A);
-          let x = -B / (2 * A);
-          if (delta == 0) {
-            result.innerHTML = `<h5>Phương trình có 1 nghiệm là: </h5>
-               <h5>x = ${x}</h5>`;
-            return;
-          }
-          if (delta > 0) {
-            result.innerHTML = `<h5>Phương trình có 2 nghiệm là: </h5>
-               <h5>x1 = ${x1}</h5> <h5>x2 = ${x2}</h5>`;
-          } else {
-            result.innerHTML = `<h5>Phương trình vô nghiệm<h5>`;
-          }
-        }
-      });
-    </script>
+    <script src="./JS/js03.js"></script>
   </body>
 </html>
