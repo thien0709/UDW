@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS05 - Bảng cửu chương</title>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <table style="width: 80%; margin: auto" border="1">
+      <caption>
+        <h1>Bảng cửu chương</h1>
+      </caption>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <script>
+      let td = document.getElementsByTagName("td");
+      cnt = 0;
+      for (let i = 2; i <= 9; i++) {
+        for(let j = 2 ;j<= 9;j++){ 
+            let p =document.createElement("p");
+            p.textContent = `${i} x ${j} = ${i*j}`;
+            td[cnt].append(p);
+        }
+        cnt++;
+      }
+    </script>
+  </body>
+</html>
