@@ -13,18 +13,22 @@
       td{
         padding: 10px;
       }
+      h1{
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
-    <form action="" style="margin: auto; width: fit-content;">
+    <form onsubmit="return false" style="margin: auto; width: fit-content;">
       <table border="1">
+        <caption><h1>Các phép tính số học</h1></caption>
         <tr>
           <td>Số thứ 1</td>
-          <td><input type="number" class="x1"/></td>
+          <td><input type="number" class="x1" required/></td>
         </tr>
         <tr>
           <td>Số thứ 2</td>
-          <td><input type="number" class="x2"/></td>
+          <td><input type="number" class="x2" required/></td>
         </tr>
         <tr>
           <td>Chọn phép toán</td>
@@ -38,8 +42,8 @@
           </td>
         </tr>
         <tr>
-          <td><input type="button" value="Thực hiện" class="action"/></td>
-          <td><input type="text" /></td>
+          <td><input type="submit" value="Thực hiện" class="action"/></td>
+          <td><input type="text" class="result" value=""/></td>
         </tr>
       </table>
     </form>
