@@ -26,6 +26,12 @@ header{
 h1{
     line-height: 3rem;
 }
+#content{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 #content .square{
     width: 200px;
     height: 200px;
