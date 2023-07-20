@@ -7,6 +7,21 @@ header{
     width: 100vw;
     height: 3rem;
     text-align: center;
+    animation: banner 5s infinite linear;
+}
+@keyframes banner {
+    0%{
+        background-color: aqua;
+        font-size: 1rem;
+    }
+    50%{
+        background-color: bisque;
+        font-size: 1.5rem;
+    }
+    100%{
+        background-color: blueviolet;
+        font-size: 1rem;
+    }
 }
 h1{
     line-height: 3rem;
@@ -21,11 +36,12 @@ h1{
     line-height: 200px;
     float: left;
 }
+
 .square:nth-child(1
 ){
-    -webkit-animation: background 5s alternate linear infinite;
+    animation: background 5s alternate linear infinite;
 }
-@-webkit-keyframes background{
+@keyframes background{
     0%{
         background-image: url(../images/javascript.jpg) ;
         background-size: cover;
