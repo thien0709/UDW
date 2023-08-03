@@ -7,10 +7,11 @@
   </head>
   <body>
     <div id="container"></div>
+    <script src="./JS/js02.js"></script>
     <script>
       let result = document.querySelector("#container");
       x = Number(prompt("Nhập tháng"));
-      y = Number(prompt("Nhập năm"));
+      y = Number(prompt("Nhập năm", 2000));
       switch (x) {
         case 1:
         case 3:
@@ -29,9 +30,8 @@
         default:
           break;
       }
-      result.innerHTML = `<h2>Tháng ${x} năm ${y} có ${date} ngày</h2> <div class="time"></div><button>Xem ngày giờ</button>`;
-      let btn = document.querySelector("button");
-      btn.addEventListener("click", function () {
+      result.innerHTML = `<h2>Tháng ${x} năm ${y} có ${date} ngày</h2> <div class="time"></div><button onclick = "xemNgayGio()">Xem ngày giờ</button>`;
+      function xemNgayGio() {
         let time = new Date();
         let year = time.getFullYear();
         let month = time.getMonth();
@@ -47,12 +47,10 @@
           "Thứ Bảy",
         ];
         let dayNow = days[day];
-        let hour = time.getHours();
-        let min = time.getMinutes();
-        let second = time.getSeconds();
         let result_time = document.querySelector(".time");
-        result_time.innerHTML = `<h4>Hôm nay, thứ ${dayNow} ngày ${date}/${month}/${year}</h4> <h4>${hour}:${min}:${second}</h4> `;
-      });
+        result_time.innerHTML = `<h4>Hôm nay, thứ ${dayNow} ngày ${date}/${month}/${year}</h4><h4 class = "clock"> </h4>`;
+        setInterval(xemGio,1000);
+      };
     </script>
   </body>
 </html>
