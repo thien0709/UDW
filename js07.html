@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS07</title>
+    <style>
+      input {
+        width: 25rem;
+      }
+      button{
+        float: left;
+        margin: 2px;
+      }
+      button:nth-child(4){
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chương trình xử lý chuỗi</h1>
+    <form action="" onsubmit = "return false;" > 
+    <table>
+        <tr>
+          <td>Chuỗi S1:</td>
+          <td>
+            <input type="text" class="S1" value="Learning JAVASCRIPT is veRy easy" />
+          </td>
+        </tr>
+        <tr>
+          <td>Chuỗi S2:</td>
+          <td><input type="text" class="S2" value="javascript" /></td>
+        </tr>
+        <tr>
+          <td>Chuỗi S3:</td>
+          <td><input type="text" class="S3" value="jQuery" /></td>
+        </tr>
+        <tr>
+          <td>Vị trí chèn:</td>
+          <td><input type="text" class="position" value="0" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button class="ch">Chuẩn hóa chuỗi</button>
+            <button class="dc">Đảo chuỗi</button>
+            <button type="reset">Khôi phục</button>
+            <button class="tt">Thay thế S2 bằng S3</button>
+            <button class="c">Chèn S2 vào S1</button>
+            <button class="x">Xóa S2 trong S1</button>
+          </td>
+        </tr>
+      </table></form> 
+    <script src="./JS/js07.js"></script>
+  </body>
+</html>
