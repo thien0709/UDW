@@ -37,11 +37,16 @@ x.addEventListener("click",function(){
 // Ham chuan hoa
 function hoaDauChuoi(str) {
     str = str.toLowerCase();
+    result = [];
     let words = str.split(" ");
     for (let i = 0; i < words.length; i++) {
-      words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        let tmp = words[i].trim();
+        if(tmp !== ''){
+            tmp = tmp.slice(0,1).toUpperCase() + tmp.slice(1);
+            result.push(tmp);
+        }
     }
-    return words.join(" ");
+    return result.join(" ");
 }
 // Ham dao chuoi
 function daoChuoi(str){
