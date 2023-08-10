@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #header{
+        height: 3rem;
+        color: yellow;
+        background-color: red;
+        text-align: center;
+      }
+      h1{
+        line-height: 3rem;
+      }
+      #container{
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        padding: 2rem;
+      }
+      #container div{
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"><h1>Welcome HTML5</h1></div>
+    <div id="container">
+      <div><label for="">Nhập nội dung:</label><input type="text" id="content"/></div>
+      <div>
+        <label for="">Màu nền: </label><input type="color" value="#ff0000" id="colorBG" />
+      </div>
+      <div>
+        <label for="">Màu chữ: </label><input type="color" value="#ffff00" id="colorText" />
+      </div>
+      <button>Thực hiện</button>
+    </div>
+    <script src="./JS/js10.js"></script>
+  </body>
+</html>

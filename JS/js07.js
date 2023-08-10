@@ -8,6 +8,13 @@ let kp = document.querySelector(".kp");
 let tt = document.querySelector(".tt");
 let c = document.querySelector(".c");
 let x = document.querySelector(".x");
+let title = document.querySelector("body h1").innerHTML;
+// Animation
+function Ani(){
+    title = title.slice(1) + title.slice(0,1);
+    document.querySelector("body h1").innerHTML = title;
+}
+setInterval(Ani,200);
 // Chuan hoa
 ch.addEventListener("click", function(){
     s1.value = s1.value.trim();
