@@ -9,13 +9,22 @@
             width: fit-content;
             height: fit-content;
             margin: auto;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
-        
+        #select button{
+            margin: .5rem ;
+        }
+        #result div{
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
     <div id="container">
-        <div><label for="">Nhập số phần tử:</label><input type="text">
+        <div id="phantu"><label for="">Nhập số phần tử:</label><input type="text">
         </div>
         <div id="select">
             <button>Tạo mảng</button><button>Sắp xếp mảng tăng</button><button>Sắp xếp mảng giảm</button>
