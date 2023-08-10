@@ -8,9 +8,50 @@ function randomList(max) {
 }
 create.addEventListener("click", function () {
   let x = Number(document.querySelector("#container input").value);
+  result = "";
   for (let i = 0; i < x; i++) {
-    arr += randomList(50) + " ";
+    arr.push(randomList(50));
   }
   let origin = document.querySelector(".origin");
-  origin.innerHTML = "Mảng ban đầu: " + arr;
+  origin.innerHTML = "Mảng ban đầu: " + display(arr);
 });
+tang.addEventListener("click", function(){
+    let arrTang = document.querySelector(".arrTang");
+    arrTang.innerHTML = "Mảng tăng dần: " + display(bubbleSort(arr));
+})
+giam.addEventListener("click",function(){
+    let arrGiam = document.querySelector(".arrGiam");
+    arrGiam.innerHTML = "Mảng giảm dần: " + display(bubbleSortRev(arr));
+})
+function bubbleSort(arr) {
+    for (var i = 0; i < arr.length; i++) { 
+        for (var j = 0; j < (arr.length - i - 1); j++) {
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+        }
+    }
+    return arr;
+}
+function bubbleSortRev(arr){
+    for (var i = 0; i < arr.length; i++) { 
+        for (var j = 0; j < (arr.length - i - 1); j++) {
+            if (arr[j] < arr[j + 1]) {
+                var temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+        }
+    }
+    return arr;
+}
+
+function display(arr){
+    let result = "";
+    for(let i =0;i<arr.length ;i++){
+        result = result + arr[i] + " ";
+    }
+    return result;
+}
