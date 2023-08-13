@@ -6,9 +6,13 @@ const canvas = document.getElementById('myCanvas');
   ctx.fillRect(50, 50, 200, 200);
 
   // Draw circle with red color
-  ctx.fillStyle = 'red';
+  const gradient = ctx.createRadialGradient(150, 150, 50, 150, 150, 100);
+  gradient.addColorStop(0, 'white');
+  gradient.addColorStop(1, 'red');
+  
   ctx.beginPath();
   ctx.arc(150, 150, 100, 0, Math.PI * 2);
+  ctx.fillStyle = gradient;
   ctx.fill();
 
   // Draw diamond with yellow color
@@ -20,8 +24,10 @@ const canvas = document.getElementById('myCanvas');
   ctx.lineTo(50, 150);
   ctx.closePath();
   ctx.fill();
+  ctx.strokeStyle = 'red';
+  ctx.stroke();
 
   // Draw "HTML5" text inside the diamond
   ctx.fillStyle = 'black';
-  ctx.font = ' 2rem Consolas';
-  ctx.fillText('HTML5', 110, 160);
+  ctx.font = ' 2rem Magneto';
+  ctx.fillText('HTML5', 75, 160);
