@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    height: 5rem;
+    background-color: aqua;
+    padding: 0 2rem;
+}
+#header h1{
+    text-transform: uppercase;
+    color: yellow;
+    line-height: 5rem;
+    float: left;
+    text-shadow: 4px 4px 3px red;
+}
+#header h4{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    line-height: 5rem;
+    float: right;
+}
+#container{
+
+
+}
+#container #navbar{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+#navbar>ul{
+    display: flex;
+
+
+}
+#navbar ul li{
+    position: relative;
+    list-style-type: none;
+    width: 10rem;
+    height: 3rem;
+    background-color: rgb(19, 218, 158);
+    line-height: 3rem;
+}
+#navbar>ul>li{
+    text-align: center;
+}
+#navbar ul li:hover{
+    background-color: rgb(11, 185, 162);
+    color: aliceblue;
+    cursor: pointer;
+}
+#navbar .subnav{
+    position: absolute;
+    top: 3rem;
+    display: none;
+}
+#navbar li:hover .subnav{
+    display: block;
+}
+#content .slider{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    height: 120px;
+
+}
+
+.slider img{
+    width: 100px;
+    flex-grow: 1;
+    margin: 2px; 
+    transition: width 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.slider img:hover{
+    width: 200px;
+}
+.subcontent{
+    display: flex;
+}
+.subcontent .tools{
+    background-color: aqua;
+    height: calc(100vh - 17.5rem);
+    width: 30%;
+}
+.subcontent .color{
+    display: flex;
+    justify-content: space-around;
+}
+.color div{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #333;
+    margin: 2px;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+.color .red{
+    background-color: red;
+}
+.color .blue{
+    background-color: blue;
+}
+.color .yellow{
+    background-color: yellow;
+}
+.color .green{
+    background-color: green;
+}
+.color input[type="radio"]{
+    display: none;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.button button{
+    margin: 5px;    
+}
+.excute{
+    width: 70%;
+    border: 2px solid #333;
+}
+.excute .ball{ 
+    background-image: url(../images/4.jpg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid red;
+    background-size: cover;
+   
+}
+#footer{
+    background-color: aquamarine;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
