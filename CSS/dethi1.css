@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+   height: 5rem;
+   background-color: rgb(9, 180, 202);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;  
+}
+#header h1{
+    text-transform: uppercase;
+    color: yellow;
+    text-shadow: 3px 3px 3px red;
+}
+#header h5{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1rem;
+}
+#container{
+    height: fit-content;
+}
+#container #nav {
+    height: 2rem;
+    background-color: rgb(11, 184, 155);
+}
+#container #nav> ul {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+#container ul li {
+    height: 2rem;
+    width: 8rem;
+    text-align: center;
+    line-height: 2rem;
+    list-style-type: none;
+    background-color: rgb(15, 150, 93);
+}
+#container li:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+}
+#container .subnav{
+    position: absolute;
+    display: none;
+}
+#container li:hover .subnav{
+    display: block; 
+}
+#container .content{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+}
+#container .leftbar{
+    width: 30%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.leftbar img{
+    width: 200px;
+    height: 120px;
+    margin: 2.6rem;
+}
+.information {
+    width: 70%;
+}
+.information h1{
+    text-align: center;
+    margin: 2rem;
+    color: red;
+    text-transform: uppercase;
+}
+.information table{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+   
+}  
+.information table, tr,td{
+     border: 1px solid #333;
+   border-collapse: collapse;
+}
+table td{
+    padding: 1rem;
+}
+td .box{
+    display: flex;
+}
+td .box-do,.box-xanh,.box-vang,.box-trang{
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+.box-do{
+    background-color: black;
+    border: 1px solid #333;
+}
+.box-xanh{
+    background-color: blue;
+    border: 1px solid #333;
+}
+.box-vang{
+    background-color: red;
+    border: 1px solid #333;
+}
+.box-trang{
+    background-color: white;
+    border: 1px solid #333;
+}
+td button{
+    
+}
+#footer{
+    height: 2.7rem;
+    background-color: blue;
+    position: static;
+    bottom: 0;
+    width: 100vw;
+
+}

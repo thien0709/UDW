@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeThi1</title>
+    <link rel="stylesheet" href="./CSS/dethi1.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Bài thi ứng dụng web</h1>
+      <h5>MSSV: 2251012128 - Họ tên: Bach Xuan Thien</h5>
+    </div>
+    <div id="container">
+      <div id="nav">
+        <ul>
+          <li>Trang chủ</li>
+          <li>
+            Các hãng xe
+            <ul class="subnav">
+              <li>Ford</li>
+              <li>Honda</li>
+              <li>Toyota</li>
+              <li>Huyndai</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="leftbar">
+          <div class="img1">
+            <img
+              src="./images/hondablack.png"
+              alt=""
+            />
+          </div>
+          <div class="img2">
+            <img
+              src="./images/hondablue.png"
+              alt=""
+            />
+          </div>
+          <div class="img3">
+            <img
+              src="./images/hondared.png"
+              alt=""
+            />
+          </div>
+          <div class="img4">
+            <img src="./images/hondawhite.png" alt="" />
+          </div>
+        </div>
+        <div class="information">
+          <h1>Thông tin đặt hàng</h1>
+          <table>
+            <tr>
+              <td>Loại xe</td>
+              <td>
+                <select name="setbrand" id="brand">
+                  <option value="Honda">Honda</option>
+                  <option value="Kia">Kia</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Số lượng</td>
+              <td><input type="number" name="" class="soluong" value="1" /></td>
+            </tr>
+            <tr>
+              <td>Màu sắc</td>
+              <td>
+                <div class="box">
+                  <div class="box-do"></div>
+                  <div class="box-xanh"></div>
+                  <div class="box-vang"></div>
+                  <div class="box-trang"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><img src="./images/hondablack.png" width="200px" alt="" class="imgpre" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button>Đặt hàng</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="./JS/dethi1.js"></script>
+  </body>
+</html>
