@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow: scroll;
+}
 #header{
    height: 5rem;
    background-color: rgb(9, 180, 202);
@@ -70,7 +73,18 @@
 .leftbar img{
     width: 200px;
     height: 120px;
-    margin: 2.6rem;
+    margin: 2.6rem 0rem;
+}
+.leftbar img:hover{
+    animation: scale 1s forwards;
+}
+@keyframes scale {
+    0%{
+    }
+    100%{
+        width: 250px;
+        height: 150px;
+    }
 }
 .information {
     width: 70%;
@@ -119,8 +133,11 @@ td .box-do,.box-xanh,.box-vang,.box-trang{
     background-color: white;
     border: 1px solid #333;
 }
-td button{
-    
+.imgtr{
+text-align: center;
+}
+.buttontr{
+    text-align: center;
 }
 #footer{
     height: 2.7rem;
