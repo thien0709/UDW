@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS13</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pie Chart Example</title>
+    <style>
+      .chart-container {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #dataInput {
+        margin-right: 10px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>Pie Chart Example</h1>
+    <div class="input-container">
+      <label for="dataInput">Nhập các giá trị:</label>
+      <input type="text" id="dataInput" />
+      <button id="drawButton">Draw Chart</button>
+    </div>
+    <div class="chart-container">
+      <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("drawButton").addEventListener("click", drawChart);
+            });
+
+            var myChart;
+
+            function drawChart() {
+                if (myChart) {
+                    myChart.destroy();
+                }
+
+                var dataInput = document.getElementById('dataInput').value;
+                var dataValues = dataInput.split(',').map(val => parseFloat(val));
+
+                var randomColors = generateRandomColors(dataValues.length);
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+                myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        datasets: [{
+                            data: dataValues,
+                            backgroundColor: randomColors,
+                            borderColor: "black",
+                            borderWidth :2,
+
+                        }]
+                    }
+                    
+                });
+            }
+            // Function get color random
+            function generateRandomColors(count) {
+                var colors = [];
+                for (var i = 0; i < count; i++) {
+                    var color = `rgba(${getRandom(0, 255)}, ${getRandom(0, 255)}, ${getRandom(0, 255)}, 0.8)`;
+                    colors.push(color);
+                }
+                return colors;
+            }
+            //Function random
+            function getRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+    </script>
+  </body>
 </html>
