@@ -1,40 +1,29 @@
-let start = document.querySelector(".start");
-let stop = document.querySelector(".stop");
-let yorn = document.querySelectorAll(".subnav li input");
-let ball = document.querySelector(".ball");
+let y = document.querySelector(".subnav #y");
+let n = document.querySelector(".subnav #n");
 let img = document.querySelectorAll(".slider img");
-//Kiem tra 
+let ball = document.querySelector(".excute .ball");
 
-// Lay hinh anh
-for (let i = 0; i < yorn.length; i++) {
-  yorn[i].addEventListener("change", function () {
-    if (yorn[i].value == "y") {
-        changeImg();
-    } else {
-        ball.style.backgroundImage = "none";
-        ball.style.backgroundColor = "red";
-    }
-  });
-}
-
-// Change image
-function changeImg() {
+y.addEventListener("click", function () {
+  let yorn = document.querySelectorAll(".subnav input");
   ball.style.backgroundImage = `url(${img[0].src})`;
-  for (let i = 0; i < img.length; i++) {
-    img[i].addEventListener("click", function () {
-      ball.style.backgroundImage = `url(${img[i].src})`;
-    });
-  }
-}
-
-start.addEventListener("click", function () {});
-// Lay mau
-
-function getColor() {
-  let color = document.querySelectorAll(" .tool input");
-  for (let i = 0; i < color.length; i++) {
-    if (color[i].checked) {
-      return color[i].value;
+  for (let i = 0; i < yorn.length; i++) {
+    for (let j = 0; j < img.length; j++) {
+      img[j].addEventListener("click", function () {
+        if (yorn[i].checked && yorn[i].value == "y") {
+          ball.style.backgroundColor = "";
+          ball.style.backgroundImage = `url(${img[j].src})`;
+        }
+      });
     }
   }
-}
+});
+n.addEventListener("click", function () {     
+  let yorn = document.querySelectorAll(".subnav input");  
+  ball.style.backgroundColor = "red";
+  for (let i = 0; i < yorn.length; i++) {
+    if (yorn[i].checked && yorn[i].value == "n") {
+      ball.style.backgroundImage = "";
+
+    }
+  }
+})
