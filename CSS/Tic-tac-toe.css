@@ -1,0 +1,14 @@
+canvas {
+    margin: 2rem;
+    border: 1px solid black;
+  }
+  fieldset{
+    text-align: center;
+  }
+  legend{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  input{
+    margin: 1rem 1rem 0 .5rem;
+  }
