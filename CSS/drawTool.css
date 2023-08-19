@@ -1,0 +1,8 @@
+fieldset{
+    display: grid;
+    justify-content: center;
+}
+canvas{
+    margin: 1rem;
+    border: 1px solid #333;
+}

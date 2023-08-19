@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw Tools</title>
+    <link rel="stylesheet" href="./CSS/drawTool.css" />
+  </head>
+  <body>
+    <fieldset>
+      <legend>Tool Draw</legend>
+      <div id="tools">
+        <input type="color" name="color" id="color" />
+        <input type="radio" name="paint" id="" value="thin" />
+        <label for="thin">Thin</label>
+        <input type="radio" name="paint" id="" value="medium" />
+        <label for="medium">Medium</label>
+        <input type="radio" name="paint" id="" value="thick" />
+        <label for="thick">Thick</label>
+        <button>Xóa</button>
+      </div>
+      <canvas id="canvas" width="800px" height="800"> </canvas>
+    </fieldset>
+    <script src="./JS/drawTool.js"></script>
+  </body>
+</html>
