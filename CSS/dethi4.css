@@ -1,0 +1,71 @@
+header{
+    height: 5rem;
+    background-color: aqua;
+    color: orange;
+    text-shadow: 4px 4px 5px red;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    line-height: 5rem;
+}
+header:hover{
+    color: purple;
+}
+nav{
+    color: aliceblue;
+    background-color: purple;
+    height: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+}
+.tools{
+    display: flex;
+}
+.tools div{
+    margin: 0 10px;
+    background-color: pink;
+    border-radius: 5px;
+    padding: .3rem;
+    color: rgb(116, 30, 30);
+    cursor: pointer;
+}
+.tools div:hover{
+    background-color: yellow;
+    font-weight: bold;
+}
+.name{
+    position: absolute;
+    right: 1rem;
+}
+#content{
+    display: grid;
+    justify-content: center;
+}
+#content div{
+    margin: auto;
+    margin-bottom: 2rem;
+}
+#boxnumber{
+    display: flex;
+}
+#boxnumber .box{
+    width: 200px;
+    height: 200px;
+    border: 5px solid green;
+    text-align: center;
+    line-height: 200px;
+    margin: 1rem;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+button{
+    padding: .5rem;
+    background-color: rgb(1, 196, 255);
+    border: 2px solid #333;
+    border-radius: 1rem;
+    cursor: pointer;
+}
