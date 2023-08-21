@@ -69,3 +69,9 @@ button{
     border-radius: 1rem;
     cursor: pointer;
 }
+#result{
+    display: flex;
+}
+#result h3{
+    margin: .2rem;
+}

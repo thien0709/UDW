@@ -3,7 +3,6 @@ let colors = document.querySelector("#colors input");
 let selects = document.querySelectorAll('input[type="radio"]');
 let value = "10";
 let button = document.querySelector("button");
-let result = document.querySelector("#result");
 // Get select
 function getSelect() {
   for (let i = 0; i < selects.length; i++) {
@@ -24,8 +23,9 @@ button.addEventListener("click", function () {
   for (let i = 0; i < randomBox.length; i++) {
     randomBox[i].innerHTML = arrAdd[i];
   }
-  
-  console.log(result.innerHTML);
+  let result = document.querySelector("#result h3:nth-child(2)");
+  let score = Number(result.innerHTML);
+  result.innerHTML = score + sumArr;
 });
 
 // Check select
