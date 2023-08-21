@@ -3,6 +3,7 @@ let colors = document.querySelector("#colors input");
 let selects = document.querySelectorAll('input[type="radio"]');
 let value = "10";
 let button = document.querySelector("button");
+let result = document.querySelector("#result");
 // Get select
 function getSelect() {
   for (let i = 0; i < selects.length; i++) {
@@ -18,12 +19,13 @@ button.addEventListener("click", function () {
   do {
     var arrAdd = randomNumber();
     var sumArr = sumArray(arrAdd);
-    console.log(x.min,x.max);
+    console.log(x.min, x.max);
   } while (sumArr < x.min || sumArr > x.max);
-  console.log(arrAdd);
   for (let i = 0; i < randomBox.length; i++) {
     randomBox[i].innerHTML = arrAdd[i];
   }
+  
+  console.log(result.innerHTML);
 });
 
 // Check select
@@ -59,3 +61,9 @@ function sumArray(arr) {
   }
   return sum;
 }
+// Change color
+colors.addEventListener("change", function () {
+  for (let i = 0; i < randomBox.length; i++) {
+    randomBox[i].style.color = colors.value;
+  }
+});
